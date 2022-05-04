@@ -201,32 +201,82 @@
 //   "🚀 ~ file: index.js ~ line 202 ~ climbStairs ~ climbStairs",
 //   climbStairs(4)
 // );
-var inorderTraversal = function (root) {
-  let node = root;
-  const result = [];
 
-  while (node) {
-    if (!node.left) {
-      result.push(node.val);
-      node = node.right;
-    } else {
-      const predecessor = findPredecessor(node);
-      if (predecessor.right === node) {
-        predecessor.right = null;
-        result.push(node.val);
-        node = node.right;
-      } else {
-        predecessor.right = node;
-        node = node.left;
-      }
-    }
-  }
-  return result;
-};
-function findPredecessor(root) {
-  let node = root.left;
-  while (node.right && node.right !== root) {
-    node = node.right;
-  }
-  return node;
-}
+// inorderTraversal binary search
+// var inorderTraversal = function (root) {
+//   let node = root;
+//   const result = [];
+
+//   while (node) {
+//     if (!node.left) {
+//       result.push(node.val);
+//       node = node.right;
+//     } else {
+//       const predecessor = findPredecessor(node);
+//       if (predecessor.right === node) {
+//         predecessor.right = null;
+//         result.push(node.val);
+//         node = node.right;
+//       } else {
+//         predecessor.right = node;
+//         node = node.left;
+//       }
+//     }
+//   }
+//   return result;
+// };
+// function findPredecessor(root) {
+//   let node = root.left;
+//   while (node.right && node.right !== root) {
+//     node = node.right;
+//   }
+//   return node;
+// }
+
+// majority Element----------------------------------------------------------------
+// var majorityElement = function (nums) {
+//   const counts = {};
+//   nums.forEach((x) => {
+//     counts[x] = (counts[x] || 0) + 1;
+//   });
+//   const max = Math.max(...Object.values(counts));
+//   for (const key in counts) {
+//     if (counts[key] === max) {
+//       return key;
+//     }
+//   }
+// };
+// console.log(
+//   "🚀 ~ file: index.js ~ line 238 ~ majorityElement",
+//   majorityElement([3, 2, 3])
+// );
+
+// var majorityElement = function (nums) {
+
+// };
+// console.log(
+//   "🚀 ~ file: index.js ~ line 238 ~ majorityElement",
+//   majorityElement([3, 2, 3])
+// );
+
+//isHappy number ----------------------------------------------------------------
+// var isHappy = function (n) {
+//   var map = {};
+//   var tmp = 0;
+
+//   if (n < 1) return false;
+
+//   while (n !== 1 && !map[n]) {
+//     map[n] = true;
+//     tmp = 0;
+
+//     while (n > 0) {
+//       tmp += Math.pow(n % 10, 2);
+//       n = Math.floor(n / 10);
+//     }
+
+//     n = tmp;
+//   }
+//   return n === 1;
+// };
+// console.log("🚀 ~ file: index.js ~ line 267 ~ isHappy ~ isHappy", isHappy(19));
