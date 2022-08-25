@@ -1,28 +1,3 @@
-//Valid Parentheses----------------------------------------------------------------
-// var isValid = function (s) {
-//   if (s.length % 2 !== 0) return false;
-//   const stack = [];
-//   const map = new Map([
-//     ["(", ")"],
-//     ["{", "}"],
-//     ["[", "]"],
-//   ]);
-//   for (let i = 0; i < s.length; i++) {
-//     if (map.has(s[i])) {
-//       stack.push(map.get(s[i]));
-//     } else if (s[i] !== stack.pop()) {
-//       return false;
-//     }
-//   }
-//   return stack.length === 0;
-// };
-// console.log(isValid(")("));
-
-// var isValid = function (s) {
-
-// };
-// console.log(isValid("(())"));
-
 // Roman to Integer----------------------------------------------------------------
 // const romanToInt = (s) => {
 // const romanMap = new Map([
@@ -52,9 +27,7 @@
 //   "🚀 ~ file: index.js ~ line 25 ~ romanToInt ~ romanToInt",
 //   romanToInt('IVX')
 // );
-
 // const isValid = (s) => {
-
 // };
 // console.log("🚀 ~ file: index.js ~ line 81 ~ isValid ~ isValid", isValid("IVX"));
 
@@ -91,7 +64,6 @@
 //   }
 //   return nums;
 // };
-
 // console.log(
 //   "🚀 ~ file: index.js ~ line 88 ~ removeElement ~ removeElement",
 //   removeElement([3, 2, 2, 3], 3)
@@ -99,30 +71,11 @@
 // const removeElement = function (nums, val) {
 
 // };
-
 // console.log(
 //   "🚀 ~ file: index.js ~ line 88 ~ removeElement ~ removeElement",
 //   removeElement([3, 2, 2, 3], 3)
 // );
 
-//implement strStr() ----------------------------------------------------------------
-
-// const strStr = function (haystack, needle) {
-//   if (needle === ') return 0;
-//   if (needle === null || haystack === null) return -1;
-//   for (let i = 0; i <= haystack.length - needle.length; i++) {
-//     if (needle === haystack.substring(i, i + needle.length)) {
-//       return i;
-//     }
-//   }
-
-//   return -1;
-// };
-// console.log(
-//   "🚀 ~ file: index.js ~ line 113 ~ strStr ~ strStr",
-//   strStr("mississippi", "issip")
-// );
-
 // const strStr = function (haystack, needle) {
 
 // };
@@ -131,57 +84,6 @@
 //   strStr("mississippi", "issip")
 // );
 
-// Maximum Subarray----------------------------------------------------------------
-// const maxSubArray = function(nums) {
-// let result = nums[0];//6
-// for(let i = 1; i < nums.length; i++) {
-//     nums[i] = Math.max(nums[i], nums[i] + nums[i - 1]);
-//     result = Math.max(nums[i], result)
-// }
-// return result;
-// };
-// console.log("maxSubArray", maxSubArray([-2,1,-3,4,-1,2,1,-5,4]))
-
-// const maxSubArray = function(nums) {
-
-// };
-// console.log("maxSubArray", maxSubArray([-2,1,-3,4,-1,2,1,-5,4]))
-
-//Merge Sorted Array----------------------------------------------------------------
-// var merge = function (nums1, m, nums2, n) {
-//   let first = m - 1;
-//   let second = n - 1;
-//   let i = m + n - 1;
-
-//   while (second >= 0) {
-//     let firstValue = nums1[first];
-//     let secondValue = nums2[second];
-
-//     if (firstValue > secondValue) {
-//       nums1[i] = firstValue;
-//       i--;
-//       first--;
-//     } else {
-//       nums1[i] = secondValue;
-//       i--;
-//       second--;
-//     }
-//   }
-//   console.log("🚀 ~ file: index.js ~ line 152 ~ merge ~ nums1", nums1);
-// };
-// console.log(
-//   "🚀 ~ file: index.js ~ line 155 ~ merge ~ merge",
-//   merge([1, 2, 3, 0, 0, 0], 3, [2, 5, 6, 7, 8, 9], 3)
-// );
-
-// var merge = function (nums1, m, nums2, n) {
-
-//   console.log("🚀 ~ file: index.js ~ line 152 ~ merge ~ nums1", nums1);
-// };
-// console.log(
-//   "🚀 ~ file: index.js ~ line 155 ~ merge ~ merge",
-//   merge([1, 2, 3], 3, [2, 5, 6, 7, 8, 9], 3)
-// );
 
 //climbStairs ----------------------------------------------------------------
 // var climbStairs = function (n) {
@@ -201,37 +103,6 @@
 //   "🚀 ~ file: index.js ~ line 202 ~ climbStairs ~ climbStairs",
 //   climbStairs(4)
 // );
-
-// inorderTraversal binary search
-// var inorderTraversal = function (root) {
-//   let node = root;
-//   const result = [];
-
-//   while (node) {
-//     if (!node.left) {
-//       result.push(node.val);
-//       node = node.right;
-//     } else {
-//       const predecessor = findPredecessor(node);
-//       if (predecessor.right === node) {
-//         predecessor.right = null;
-//         result.push(node.val);
-//         node = node.right;
-//       } else {
-//         predecessor.right = node;
-//         node = node.left;
-//       }
-//     }
-//   }
-//   return result;
-// };
-// function findPredecessor(root) {
-//   let node = root.left;
-//   while (node.right && node.right !== root) {
-//     node = node.right;
-//   }
-//   return node;
-// }
 
 // majority Element----------------------------------------------------------------
 // var majorityElement = function (nums) {
@@ -280,3 +151,27 @@
 //   return n === 1;
 // };
 // console.log("🚀 ~ file: index.js ~ line 267 ~ isHappy ~ isHappy", isHappy(19));
+
+//Count vowels--------------------------------------------------------
+
+// function solve(s) {
+//   let count = 0;
+//   let result = 0;
+//   let tmp = 0;
+//   let vowels = ["a", "e", "i", "o", "u"];
+
+// for (let i = 0; i < s.length; i++) {
+//   if (vowels.includes(s[i])) {
+//     count++;
+//     tmp = count;
+//     if (result < tmp) {
+//       result = tmp;
+//     }
+//   } else if (!vowels.includes(s[i])) {
+//     count = 0;
+//     tmp = count;
+//   }
+// }
+// }
+
+// console.log(solve("suoidea"));
