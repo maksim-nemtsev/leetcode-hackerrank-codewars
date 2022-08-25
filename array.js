@@ -1,5 +1,3 @@
-
-
 //Merge Sorted Array----------------------------------------------------------------
 // var merge = function (nums1, m, nums2, n) {
 //   let first = m - 1;
@@ -37,13 +35,12 @@
 //   merge([1, 2, 3], 3, [2, 5, 6, 7, 8, 9], 3)
 // );
 
-
 //counting word in arr ----------------------------------------------------------------
 // const samorukov = (str) => {
 //     const arr = str.split("");
-  
+
 //     const setToArr = [...new Set(arr)];
-  
+
 //     const result = setToArr.map(
 //       (el) => `${el}: ${arr.filter((element) => element === el).length}`
 //     );
@@ -79,7 +76,6 @@
 
 // console.log(twoSum([2, 15, 7, 11], 9));
 
-
 //------------------------------------------------------------------------------
 // const arr1 = ["hello", "vtb", "mix", "bannana"];
 // const arr2 = ["dfdasf", "vtb", "bannana", "wosdfsrld"];
@@ -96,3 +92,72 @@
 // };
 
 // console.log(func(arr1, arr2)); //[ 'vtb' ]
+
+//HR countingSort------------------------------------------------------------
+
+// function countingSort(arr) {
+//   const counts = []
+//   for(let i = 0; i < 100; i++) {
+//       counts[i] = 0;
+//   }
+//   for(let i = 0; i < arr.length; i++) {
+//       counts[arr[i]]++;
+//   }
+//   return counts
+// }
+
+// console.log(
+//   "🚀 ~ file: array.js ~ line 103 ~ countingSort ~ countingSort(arr)",
+//   countingSort([
+//     63, 54, 17, 78, 43, 70, 32, 97, 16, 94, 74, 18, 60, 61, 35, 83, 13, 56, 75,
+//     52, 70, 12, 24, 37, 17, 0, 16, 64, 34, 81, 82, 24, 69, 2, 30, 61, 83, 37,
+//     97, 16, 70, 53, 0, 61, 12, 17, 97, 67, 33, 30, 49, 70, 11, 40, 67, 94, 84,
+//     60, 35, 58, 19, 81, 16, 14, 68, 46, 42, 81, 75, 87, 13, 84, 33, 34, 14, 96,
+//     7, 59, 17, 98, 79, 47, 71, 75, 8, 27, 73, 66, 64, 12, 29, 35, 80, 78, 80, 6,
+//     5, 24, 49, 82,
+//   ])
+// );
+//2 0 1 0 0 1 1 1 1 0 0 1 3 2 2 0 4 4 1 1 0 0 0 0 3 0 0 1 0 1 2 0 1 2 2 3 0 2 0 0 1 0 1 1 0 0 1 1 0 2 0 0 1 1 1 0 1 0 1 1 2 3 0 1 2 0 1 2 1 1 4 1 0 1 1 3 0 0 2 1 2 3 2 2 2 0 0 1 0 0 0 0 0 0 2 0 1 3 1 0
+
+//leetcode ----------------------------------------------------------------
+
+// var climbStairs = function (n) {
+//   const arr = [1, 1];
+//   if (n > 1) {
+//     for (let i = 2; i <= n; i++) {
+//       arr[i] = arr[i - 1] + arr[i - 2];
+//     }
+//   }
+//   return arr.pop();
+// };
+// console.log("🚀 ~ file: array.js ~ line 133 ~ climbStairs ~ climbStairs", climbStairs(5))
+//for(let i = 2; i <= n ; i++){
+// ary[i] = ary[i-1] + ary[i-2];
+
+//when i = 2
+// ary[2] = ary[2-1] + ary[2-2]
+//=> ary[2] = ary[1] + ary[0]
+//=> ie new element = sum of previous two elements
+// ary = [1,1,2]
+//when i - 3
+//ary[3] = ary[3-1] + ary[3-2]
+//=> ary[3] = ary[2] + ary[1]
+// ary = [1,1,2,3]
+//etc
+// }
+
+//binary search --------------------------------
+
+// var search = function (nums, target) {
+//   let result;
+//   for (let i = 0; i < nums.length; i++) {
+//     if (nums[i] === target) {
+//       result = i;
+//     }
+//   }
+//   return (result === 0 || result) ? result : -1;
+// };
+// console.log(
+//   "🚀 ~ file: array.js ~ line 157 ~ search ~ search",
+//   search([5], 5)
+// );

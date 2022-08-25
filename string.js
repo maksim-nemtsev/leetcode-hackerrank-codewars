@@ -119,3 +119,6 @@
 //     return strs[0].substr(0, i);
 //   };
 //   console.log("result:", longestCommonPrefix(["flow"]));
+
+//leetcode ----------------------------------------------------------------
+

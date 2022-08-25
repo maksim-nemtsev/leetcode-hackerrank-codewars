@@ -1,14 +1,15 @@
-// let f = function () {
+// let time1 = 1000;
+// let time2 = 6000;
+// let f = () => {
 //   console.log(1);
 // };
 
-// let execute = function (f) {
-//   setTimeout(f, 1000);
-// };
+// function execute(f) {
+//   setTimeout(f, 3000);
+// }
 
 // execute(f); // что выведет в консоль и почему
-
-// f = function () {
-//   console.log(2);
+// f = () => {
+//   console.log(3);
 // };
 // execute(f); // что выведет в консоль и почему
