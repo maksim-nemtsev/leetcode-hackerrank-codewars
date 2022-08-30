@@ -161,3 +161,66 @@
 //   "🚀 ~ file: array.js ~ line 157 ~ search ~ search",
 //   search([5], 5)
 // );
+
+// cw All inclusive ----------------------------------------------------------------
+// function containAllRots(s, arr) {
+//   // your code
+//   for (let i = 0; i < s.length; i++)
+//     if (arr.indexOf(s.slice(i) + s.slice(0, i)) === -1) return false;
+//   return true;
+// }
+// console.log(
+//   containAllRots("Ajylvpy", [
+//     "Ajylvpy",
+//     "ylvpyAj",
+//     "jylvpyA",
+//     "lvpyAjy",
+//     "pyAjylv",
+//     "vpyAjyl",
+//     "ipywee",
+//   ])
+// );
+// console.log(
+//   containAllRots("bsjq", ["bsjq", "qbsj", "sjqb", "twZNsslC", "jqbs"])
+// );
+
+//cw Two to One ----------------------------------------------------------------
+
+// function longest(s1, s2) {
+//   // your code
+//   const newArrFromString = [...s1, ...s2].sort();
+//   return Array.from(new Set(newArrFromString)).join("");
+// }
+
+// function longest(s1, s2) {
+//   // your code
+//   let newStr = s1 + s2;
+//   let sortedStrArr = newStr.split("").sort();
+
+//   return sortedStrArr
+//     .filter((value, index, self) => {
+//       return self.indexOf(value) === index;
+//     })
+//     .join("");
+// }
+
+//cw remove duplicates ------------------------------
+
+// function distinct(a) {
+//   let result = [];
+//   a.map((x) => {
+//     if (!result.includes(x)) {
+//       result.push(x);
+//     }
+//   });
+//   return result;
+// }
+
+// // function distinct(a) {
+// //   return [...new Set(a)];
+// // }
+// // const distinct = (a) => a.filter((item, index) => a.indexOf(item) === index);
+// console.log(
+//   "🚀 ~ file: array.js ~ line 210 ~ distinct ~ distinct(a)",
+//   distinct([1, 2, 1, 2, 3, 4, 5, 5, 6])
+// );

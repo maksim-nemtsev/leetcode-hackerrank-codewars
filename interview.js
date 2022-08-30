@@ -116,3 +116,92 @@
 //   "🚀 ~ file: interview.js ~ line 89 ~ findNestedKeys ~ findNestedKeys",
 //   findNestedKeys(stringPath, obj)
 // );
+
+// closure function increment ----------------------------------------------------------------
+
+// const inc = () => {
+//   inc.count = inc.count || 1;
+//   return inc.count++;
+// };
+// console.log(inc());
+// console.log(inc());
+// console.log(inc());
+
+// this and setTimeout ----------------------------------------------------------------
+
+// const obj = {
+//   a: 42,
+//   say: function () {
+//     setTimeout(function() {
+//       console.log("this.a: " + this.a);
+//     }, 1000);
+//   },
+// };
+// console.log(obj.say());
+
+// const obj = {
+//   a: 42,
+//   say: function () {
+//     function helper() {
+//       console.log("this.a: ", this.a);
+//     }
+//     setTimeout(helper.bind(this), 1000);
+//   },
+// };
+// console.log(obj.say());
+
+// bind ----------------------------------------------------------------
+
+// const ex = (value, sum) => console.log(value + sum);
+// const fx = ex.bind(null, 10);
+
+// ex(12, 7);
+// fx(7, 12);
+
+// sort fruits by frequency ----------------------------------------------------------------
+
+// const fruits = [
+//   "bannana",
+//   "grapefruit",
+//   "orange",
+//   "orange",
+//   "coconat",
+//   "bannana",
+//   "bannana",
+//   "coconat",
+//   "coconat",
+//   "coconat",
+//   "coconat",
+// ];
+
+// const sortFruits = (arr) => {
+//   const objFruits = arr.reduce((acc, val)=> {
+//     acc[val] = (acc[val] || 0) + 1;
+//     return acc;
+//   }, {})
+//   const keys = Object.keys(objFruits);
+//   return keys.sort((a, b) => objFruits[b] - objFruits[a])
+// };
+// console.log(
+//   "🚀 ~ file: interview.js ~ line 193 ~ sortFruits ~ sortFruits",
+//   sortFruits(fruits)
+// );
+
+//multiplyByTwo ----------------------------------------------------------------
+// const multiplyByTwo = (...args) => args.map((el) => el * el);
+// console.log(
+//   "🚀 ~ file: interview.js ~ line 190 ~ multiplyByTwo",
+//   multiplyByTwo(2, 3)
+// );
+
+//carry ----------------------------------------------------------------
+// // const sum = a => b => a + b;
+// console.log(sum(1)(2));
+// console.log(sum(3)(4));
+
+const sum = (a, b) => a + b;
+const multiply = (a, b) => a * b;
+
+const calc = (cb) => (a) => (b) => cb(a, b);
+console.log(`calc ${sum} :`, calc(sum)(1)(2));
+console.log(`calc ${multiply} :`, calc(multiply)(1)(2));

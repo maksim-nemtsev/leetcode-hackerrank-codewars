@@ -84,7 +84,6 @@
 //   strStr("mississippi", "issip")
 // );
 
-
 //climbStairs ----------------------------------------------------------------
 // var climbStairs = function (n) {
 //   if (n === 1 || n === 0) return 1; // our base cases
@@ -176,4 +175,28 @@
 
 // console.log(solve("suoidea"));
 
-//leetcode ----------------------------------------------------------------
+//cw Deodorant Evaporator------------------------------
+
+// function evaporator(content, evap_per_day, threshold) {
+//   let days = 0,
+//     percentage = 100;
+
+//   while (percentage > threshold) {
+//     percentage -= (percentage * evap_per_day) / 100;
+//     days++;
+//   }
+//   return days;
+// }
+// //evaporator(10, 10, 5) -> 29
+// console.log(evaporator(10, 10, 5));
+
+// cw
+// function repeats(arr) {
+//   return arr
+//     .filter((v) => arr.indexOf(v) === arr.lastIndexOf(v))
+//     .reduce((a, b) => a + b, 0);
+// }
+// console.log(
+//   "🚀 ~ file: number.js ~ line 195 ~ repeats ~ repeats(arr)",
+//   repeats([1, 2, 3, 12, 3, 4, 5])
+// );

@@ -85,3 +85,23 @@
 
 //leetcode ----------------------------------------------------------------
 
+//cw DNA
+// "ATTGC" --> "TAACG"
+// "GTAT" --> "CATA"
+// function DNAStrand(dna) {
+//   //your code here
+//   var pairs = {
+//     A: "T",
+//     T: "A",
+//     C: "G",
+//     G: "C",
+//   };
+
+//   var arr = dna.split("");
+
+//   return arr.map((x) => [pairs[x]]).join("");
+// }
+// console.log(
+//   "🚀 ~ file: object.js ~ line 90 ~ DNAStrand ~ DNAStrand(dna)",
+//   DNAStrand("ATTGC")
+// );

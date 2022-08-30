@@ -88,7 +88,6 @@
 // };
 // console.log(maxString("abcdddd"));
 
-
 // ---------------------------------------------------
 // const encrypt = (message) => {
 //   let cipher = "";
@@ -114,7 +113,7 @@
 // const longestCommonPrefix = (strs) => {
 //     if (!strs[0] || strs.length === 1) return strs[0] || "";
 //     let i = 0;
-  
+
 //     while (strs[0][i] && strs.every((str) => str[i] === strs[0][i])) i++;
 //     return strs[0].substr(0, i);
 //   };
@@ -122,3 +121,124 @@
 
 //leetcode ----------------------------------------------------------------
 
+//cipher code ----------------------------------------------------------------
+
+// function cipherRot13(str, amount) {
+//   if (amount < 0) {
+//     return cipherRot13(str, amount + 26);
+//   }
+
+//   // Make an output variable
+//   let output = "";
+
+//   // Go through each character
+//   for (let i = 0; i < str.length; i++) {
+//     // Get the character we'll be appending
+//     let c = str[i];
+
+//     // If it's a letter...
+//     if (c.match(/[a-z]/i)) {
+//       // Get its code
+//       let code = str.charCodeAt(i);
+
+//       // Uppercase letters
+//       if (code >= 65 && code <= 90) {
+//         c = String.fromCharCode(((code - 65 + amount) % 26) + 65);
+//       }
+
+//       // Lowercase letters
+//       else if (code >= 97 && code <= 122) {
+//         c = String.fromCharCode(((code - 97 + amount) % 26) + 97);
+//       }
+//     }
+
+//     // Append
+//     output += c;
+//   }
+
+//   // All done!
+//   return output;
+// }
+// console.log(
+//   "🚀 ~ file: string.js ~ line 129 ~ cipherRot13 ~ cipherRot13",
+//   cipherRot13("middle-Outz", 12)
+// );
+
+// grid challenge ----------------------------------------------------
+
+// function gridChallenge(grid) {
+//   let cur = [];
+
+//   for (let i = 0; i < grid.length; i++) {
+//     const el = grid[i];
+//     const text = el.split("").sort();
+//     cur.push(text);
+//   }
+
+//   let column = cur[0].length;
+
+//   for (let j = 0; j < cur.length - 1; j++) {
+//     for (let z = 0; z < column; z++) {
+//       if (cur[j][z] > cur[j + 1][z]) {
+//         return "NO";
+//       }
+//     }
+//   }
+//   return "YES";
+// }
+
+// console.log(
+//   "🚀 ~ file: string.js ~ line 171 ~ gridChallenge ~ gridChallenge",
+//   gridChallenge(["ebacd", "fghij", "olmkn", "trpqs", "xywuv"])
+// );
+
+// super digit ----------------------------------------------------------------
+
+// function superDigit(n, k) {
+//         let strOfNumber = '';
+//     while(k > 0) {
+//         strOfNumber += String(n);
+//         k--;
+//     }
+
+//     for (let sum = 0, i = 0, n = String(strOfNumber); i < strOfNumber.length; i++) {
+//         sum += Number(n[i]);
+
+//     }
+
+// }
+// console.log("🚀 ~ file: string.js ~ line 199 ~ superDigit ~ superDigit", superDigit(9875, 4))
+// function superDigit(n, k) {
+//     let strOfNumber = '';
+//     while(k > 0) {
+//         strOfNumber += String(n);
+//         k--;
+//     }
+//     let arr = strOfNumber.split('');
+//     let mapNum = arr.map(el => +el);
+//     let sum = mapNum.reduce((a, b) => a + b, 0);
+//     return (sum - 1) % 9 + 1;
+// }
+// console.log("🚀 ~ file: string.js ~ line 199 ~ superDigit ~ superDigit", superDigit(9875, 4))
+
+// Isograms ----------------------------------------------------------------
+// function isIsogram(str) {
+//   //...
+//   let arr = str.toLowerCase().split("");
+//   let unique = [...new Set(arr)];
+
+//   return JSON.stringify(arr) == JSON.stringify(unique);
+// }
+// console.log(
+//   "🚀 ~ file: string.js ~ line 227 ~ isIsogram ~ isIsogram(str)",
+//   isIsogram("Dermatoglyphics")
+// );
+
+// alphabetical addition --------------------------------
+
+// const addLetters = (...letters) =>
+//   String.fromCharCode(
+//     (letters.reduce((sum, value) => sum + value.charCodeAt() - 96, 25) % 26) +
+//       97
+//   );
+// console.log(addLetters('a', 'b', 'c'));
