@@ -199,9 +199,46 @@
 // console.log(sum(1)(2));
 // console.log(sum(3)(4));
 
-const sum = (a, b) => a + b;
-const multiply = (a, b) => a * b;
+// const sum = (a, b) => a + b;
+// const multiply = (a, b) => a * b;
 
-const calc = (cb) => (a) => (b) => cb(a, b);
-console.log(`calc ${sum} :`, calc(sum)(1)(2));
-console.log(`calc ${multiply} :`, calc(multiply)(1)(2));
+// const calc = (cb) => (a) => (b) => cb(a, b);
+// console.log(`calc ${sum} :`, calc(sum)(1)(2));
+// console.log(`calc ${multiply} :`, calc(multiply)(1)(2));
+
+// const myArray = [
+//   { name: "width", value: 10 },
+//   { name: "height", value: 20 },
+//   { name: "position", value: 300 },
+// ];
+// const arrayToObject = (arr) => {
+//   let result = {};
+//   arr.forEach((item) => {
+//     result[item.name] = item.value;
+//   });
+//   return result;
+// };
+// console.log(
+//   "🚀 ~ file: interview.js ~ line 210 ~ arrayToObject ~ arrayToObject",
+//   arrayToObject(myArray)
+// );
+// import axios from "axios";
+// function getUrl(url, retries, timeout) {
+//   let count = retries;
+//   const intervalRunning = setInterval(() => {
+//     if (count > 0) {
+//       axios.get(url).then((response) => {
+//         printData(response.data);
+//         count--;
+//       });
+//     } else {
+//       clearInterval(intervalRunning);
+//     }
+//   }, timeout);
+// }
+
+// function printData(data) {
+//   console.log(data);
+// }
+
+// getUrl("https://jsonplaceholder.typicode.com/posts/1", 3, 5000);
