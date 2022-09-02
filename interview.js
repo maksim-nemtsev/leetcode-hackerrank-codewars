@@ -242,3 +242,58 @@
 // }
 
 // getUrl("https://jsonplaceholder.typicode.com/posts/1", 3, 5000);
+
+// const daysCount = (dayPath, nightPath) => {
+//   if (dayPath < nightPath) return "dayPath travel should be greater than night";
+
+//   let days = 0;
+//   let countingTheDayPath = 0;
+//   let countingTheNigthPath = 0;
+
+//   while (countingTheDayPath <= 100) {
+//     days++;
+//     countingTheDayPath = countingTheNigthPath + dayPath;
+//     countingTheNigthPath = countingTheDayPath - nightPath;
+//   }
+
+//   return days;
+// };
+// console.log(
+//   "🚀 ~ file: interview.js ~ line 258 ~ daysCount ~ daysCount",
+//   daysCount(50, 30)
+// );
+
+// const handshakeCounting = (people) => {
+//   if (people <= 0) return "need people for handshake";
+
+//   let peopleCanShake = people - 1;
+//   let count = 0.5 * peopleCanShake * (peopleCanShake + 1);
+//   return count;
+// };
+// console.log(
+//   "🚀 ~ file: interview.js ~ line 271 ~ handshakeCounting ~ handshakeCounting",
+//   handshakeCounting(-10)
+// );
+// console.log(
+//   "🚀 ~ file: interview.js ~ line 271 ~ handshakeCounting ~ handshakeCounting",
+//   handshakeCounting(6)
+// );
+
+// const removeDuplicates = (str) => {
+//   let result = "";
+//   if (typeof str !== "string") {
+//     return "need string to remove duplicate";
+//   } else {
+//     let arrOfString = str.split(",");
+//     result = Array.from(new Set(arrOfString)).join(",");
+//   }
+//   return result;
+// };
+// console.log(
+//   "🚀 ~ file: interview.js ~ line 284 ~ removeDuplicates ~ removeDuplicates",
+//   removeDuplicates("кошка,собака,лошадь,корова,корова,корова,кошка")
+// );
+// console.log(
+//   "🚀 ~ file: interview.js ~ line 284 ~ removeDuplicates ~ removeDuplicates",
+//   removeDuplicates(1)
+// );
