@@ -224,3 +224,99 @@
 //   "🚀 ~ file: array.js ~ line 210 ~ distinct ~ distinct(a)",
 //   distinct([1, 2, 1, 2, 3, 4, 5, 5, 6])
 // );
+
+// plusMinus------------------------------------------------------------------------------
+// function plusMinus(arr) {
+//   // Write your code here
+//   let positive = 0;
+//   let negative = 0;
+//   let zero = 0;
+
+//   arr.forEach((el) => {
+//     if (el > 0) {
+//       positive++;
+//     }
+//     if (el < 0) {
+//       negative++;
+//     }
+//     if (el === 0) {
+//       zero++;
+//     }
+//   });
+//   console.log((positive / arr.length).toFixed(6));
+//   console.log((negative / arr.length).toFixed(6));
+//   console.log((zero / arr.length).toFixed(6));
+// }
+// console.log(
+//   "🚀 ~ file: array.js ~ line 229 ~ plusMinus ~ plusMinus(arr)",
+//   plusMinus([-4, 3, -9, 0, 4, 1])
+// );
+
+//miniMaxSum------------------------------------------------------------------------------------------------
+// function miniMaxSum(arr) {
+//   // Write your code here
+//   const sortedArr = arr.sort((a, b) => a - b);
+//   let maxSum = 0;
+//   let minSum = 0;
+
+//   for (let i = 1; i < sortedArr.length; i++) {
+//     maxSum += sortedArr[i];
+//   }
+//   for (let i = 0; i < sortedArr.length - 1; i++) {
+//     minSum += sortedArr[i];
+//   }
+//   console.log(minSum, maxSum);
+// }
+// console.log(
+//   "🚀 ~ file: array.js ~ line 259 ~ miniMaxSum ~ miniMaxSum(arr)",
+//   miniMaxSum([1, 2, 3, 4, 5])
+// );
+
+//matchingStrings   ----------------------------------------------------------------
+// function matchingStrings(strings, queries) {
+//   // Write your code here
+//   const countingMatches = {};
+//   let count = 1;
+//   const result = [];
+
+//   for (let i = 0; i < strings.length; i++) {
+//     const el = strings[i];
+//     if (!countingMatches[el]) {
+//       countingMatches[el] = count;
+//     } else {
+//       countingMatches[el]++;
+//     }
+//   }
+//   const keys = Object.keys(countingMatches);
+
+//   for (let i = 0; i < queries.length; i++) {
+//     const el = queries[i];
+
+//     if (keys.indexOf(el) !== -1) {
+//       result.push(countingMatches[el]);
+//     } else {
+//       result.push(0);
+//     }
+//   }
+//   return result;
+// }
+// console.log(
+//   "🚀 ~ file: array.js ~ line 278 ~ matchingStrings ~ matchingStrings(strings, queries)",
+//   matchingStrings(["aba", "baba", "aba", "xzxb"], ["aba", "xzxb", "ab"])
+// );
+
+//--find uniqueElement in array----------------------------------------------------------------
+function lonelyinteger(arr) {
+  // Write your code hered
+  let uniqueElement;
+  arr.forEach((element) => {
+    if (arr.indexOf(element) === arr.lastIndexOf(element)) {
+      uniqueElement = element;
+    }
+  });
+  return uniqueElement;
+}
+console.log(
+  "🚀 ~ file: array.js ~ line 311 ~ lonelyinteger ~ lonelyinteger(a)",
+  lonelyinteger([1, 2, 1, 2, 3, 4, 4, 5, 5])
+);

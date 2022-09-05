@@ -242,3 +242,23 @@
 //       97
 //   );
 // console.log(addLetters('a', 'b', 'c'));
+
+///------------ time conversions --------------------
+// function timeConversion(s) {
+//     // Write your code here
+//     let hours = s.slice(0, 2);
+//     let minutes = s.slice(3, 5);
+//     let second = s.slice(6, 8);
+//     let modifier = s.slice(-2);
+
+//     if(hours === '12') {
+//         hours = '00'
+//     }
+//     if(modifier === 'PM') {
+//         hours = parseInt(hours, 10) + 12;
+//     }
+//     return `${hours}:${minutes}:${second}`;
+
+// }
+// console.log("🚀 ~ PM", timeConversion('12:01:01PM'))//'12:01:01'
+// console.log("🚀 ~ AM", timeConversion('12:01:01AM'))//'00:01:01'
