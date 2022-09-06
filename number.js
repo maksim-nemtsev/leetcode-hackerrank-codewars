@@ -200,3 +200,16 @@
 //   "🚀 ~ file: number.js ~ line 195 ~ repeats ~ repeats(arr)",
 //   repeats([1, 2, 3, 12, 3, 4, 5])
 // );
+
+// Number(42).toString(2);
+
+// reverse binary integer and return 32 bits integer----------------------------------------------------------------
+//You will be given a list of 32 bit unsigned integers.
+// Flip all the bits 1 -> 0 ( and ) 0 -> 1 and return the result as an unsigned integer.
+// function flippingBits(n) {
+//   return ~n >>> 0;
+// }
+// console.log(
+//   "🚀 ~ file: number.js ~ line 208 ~ flippingBits ~ flippingBits(n)",
+//   flippingBits(3)
+// );

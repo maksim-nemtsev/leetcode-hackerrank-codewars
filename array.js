@@ -1,5 +1,5 @@
 //Merge Sorted Array----------------------------------------------------------------
-// var merge = function (nums1, m, nums2, n) {
+// let merge = function (nums1, m, nums2, n) {
 //   let first = m - 1;
 //   let second = n - 1;
 //   let i = m + n - 1;
@@ -26,7 +26,7 @@
 //   merge([1, 2, 3, 0, 0, 0], 3, [2, 5, 6, 7, 8, 9], 3)
 // );
 
-// var merge = function (nums1, m, nums2, n) {
+// let merge = function (nums1, m, nums2, n) {
 
 //   console.log("🚀 ~ file: index.js ~ line 152 ~ merge ~ nums1", nums1);
 // };
@@ -57,7 +57,7 @@
  * @param {number} target
  * @return {number[]}
  */
-// var twoSum = function (nums, target) {
+// let twoSum = function (nums, target) {
 //   const numsIndexes = {};
 
 //   for (let i = 0; i < nums.length; i += 1) {
@@ -121,7 +121,7 @@
 
 //leetcode ----------------------------------------------------------------
 
-// var climbStairs = function (n) {
+// let climbStairs = function (n) {
 //   const arr = [1, 1];
 //   if (n > 1) {
 //     for (let i = 2; i <= n; i++) {
@@ -148,7 +148,7 @@
 
 //binary search --------------------------------
 
-// var search = function (nums, target) {
+// let search = function (nums, target) {
 //   let result;
 //   for (let i = 0; i < nums.length; i++) {
 //     if (nums[i] === target) {
@@ -165,12 +165,13 @@
 // cw All inclusive ----------------------------------------------------------------
 // function containAllRots(s, arr) {
 //   // your code
-//   for (let i = 0; i < s.length; i++)
-//     if (arr.indexOf(s.slice(i) + s.slice(0, i)) === -1) return false;
-//   return true;
+// //   for (let i = 0; i < s.length; i++)
+// //     if (arr.indexOf(s.slice(i) + s.slice(0, i)) === -1) return false;
+// //   return true;
+//     return arr.find(el => el === s) ? true : false;
 // }
 // console.log(
-//   containAllRots("Ajylvpy", [
+//   containAllRots("Ajylvpyd", [
 //     "Ajylvpy",
 //     "ylvpyAj",
 //     "jylvpyA",
@@ -181,7 +182,7 @@
 //   ])
 // );
 // console.log(
-//   containAllRots("bsjq", ["bsjq", "qbsj", "sjqb", "twZNsslC", "jqbs"])
+//   containAllRots("bsjqd", ["bsjq", "qbsj", "sjqb", "twZNsslC", "jqbs"])
 // );
 
 //cw Two to One ----------------------------------------------------------------
@@ -306,17 +307,46 @@
 // );
 
 //--find uniqueElement in array----------------------------------------------------------------
-function lonelyinteger(arr) {
-  // Write your code hered
-  let uniqueElement;
-  arr.forEach((element) => {
-    if (arr.indexOf(element) === arr.lastIndexOf(element)) {
-      uniqueElement = element;
+// function lonelyinteger(arr) {
+//   // Write your code hered
+//   let uniqueElement;
+//   arr.forEach((element) => {
+//     if (arr.indexOf(element) === arr.lastIndexOf(element)) {
+//       uniqueElement = element;
+//     }
+//   });
+//   return uniqueElement;
+// }
+// console.log(
+//   "🚀 ~ file: array.js ~ line 311 ~ lonelyinteger ~ lonelyinteger(a)",
+//   lonelyinteger([1, 2, 1, 2, 3, 4, 4, 5, 5])
+// );
+
+//sum diagonal elements in array----------------------------------------------------------------------
+function diagonalDifference(arr) {
+  // Write your code here
+  let n = arr.length;
+  let d1 = 0;
+  let d2 = 0;
+  for (let i = 0; i < n; i++) {
+    for (let j = 0; j < n; j++) {
+      // finding the sum of primary diagonal
+      if (i === j) {
+        d1 += arr[i][j];
+      }
+      // finding the sum of secondary diagonal
+      if (i + j === n - 1) {
+        d2 += arr[i][j];
+      }
     }
-  });
-  return uniqueElement;
+  }
+  return Math.abs(d1 - d2);
 }
 console.log(
-  "🚀 ~ file: array.js ~ line 311 ~ lonelyinteger ~ lonelyinteger(a)",
-  lonelyinteger([1, 2, 1, 2, 3, 4, 4, 5, 5])
+  "🚀 ~ file: array.js ~ line 328 ~ diagonalDifference ~ diagonalDifference(arr)",
+  diagonalDifference([
+    [11, 2, 4],
+    [4, 5, 6],
+    [10, 8, -12],
+  ])
 );

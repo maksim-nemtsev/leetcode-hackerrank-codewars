@@ -297,3 +297,36 @@
 //   "🚀 ~ file: interview.js ~ line 284 ~ removeDuplicates ~ removeDuplicates",
 //   removeDuplicates(1)
 // );
+
+// const readline = require('readline');
+import readline from './readline'
+ 
+const rl = readline.createInterface({
+    input: process.stdin
+});
+ 
+let lines = [];
+rl.on('line', (line) => {
+    lines.push(line);
+}).on('close', () => {
+    const [jewels, stones] = lines
+    let result = 0;
+    for (let i = 0; i < stones.length; i++) {
+        if (jewels.includes(stones.charAt(i))) {
+            ++result;
+        }
+    }
+    process.stdout.write(result.toString());
+});
+
+const sum = (data) => {
+    let mas = data.toString().split(' ');
+    return +mas[0] + +mas[1];
+};
+         
+let cnt, res;
+process.stdin.on('data', data => {
+    res = sum(data);
+    process.stdout.write(res + '');
+    process.exit();
+});
