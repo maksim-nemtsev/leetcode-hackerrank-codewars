@@ -323,30 +323,75 @@
 // );
 
 //sum diagonal elements in array----------------------------------------------------------------------
-function diagonalDifference(arr) {
+// function diagonalDifference(arr) {
+//   // Write your code here
+//   let n = arr.length;
+//   let d1 = 0;
+//   let d2 = 0;
+//   for (let i = 0; i < n; i++) {
+//     for (let j = 0; j < n; j++) {
+//       // finding the sum of primary diagonal
+//       if (i === j) {
+//         d1 += arr[i][j];
+//       }
+//       // finding the sum of secondary diagonal
+//       if (i + j === n - 1) {
+//         d2 += arr[i][j];
+//       }
+//     }
+//   }
+//   return Math.abs(d1 - d2);
+// }
+// console.log(
+//   "🚀 ~ file: array.js ~ line 328 ~ diagonalDifference ~ diagonalDifference(arr)",
+//   diagonalDifference([
+//     [11, 2, 4],
+//     [4, 5, 6],
+//     [10, 8, -12],
+//   ])
+// );
+
+//permutation two array of ------------------------------------------------------------
+// function twoArrays(k, A, B) {
+//   // Write your code here
+//   A = A.sort((a, b) => a - b);
+//   B = B.sort((a, b) => b - a);
+//   let count = 0;
+
+//   A.map((_, i) => {
+//     if (A[i] + B[i] >= k) {
+//       count += 1;
+//     }
+//   });
+//   return A.length === count ? "YES" : "NO";
+// }
+
+// console.log(
+//   "🚀 ~ file: array.js ~ line 357 ~ twoArrays ~ twoArrays(k, A, B)",
+//   twoArrays(10, [2, 1, 3], [7, 8, 9])
+// );
+
+// maerchant socks ----------------------------------------------------------------
+
+function sockMerchant(n, ar) {
   // Write your code here
-  let n = arr.length;
-  let d1 = 0;
-  let d2 = 0;
-  for (let i = 0; i < n; i++) {
-    for (let j = 0; j < n; j++) {
-      // finding the sum of primary diagonal
-      if (i === j) {
-        d1 += arr[i][j];
-      }
-      // finding the sum of secondary diagonal
-      if (i + j === n - 1) {
-        d2 += arr[i][j];
-      }
-    }
+  let hash = {};
+  let count = 1;
+  let result = 0;
+
+  for (let i = 0; i < ar.length; i++) {
+    const el = ar[i];
+    if (!hash[el]) {
+      hash[el] = count;
+    } else hash[el]++;
   }
-  return Math.abs(d1 - d2);
+  const keys = Object.values(hash);
+  keys.forEach((el) => {
+    result += Math.floor(el / 2);
+  });
+  return result;
 }
 console.log(
-  "🚀 ~ file: array.js ~ line 328 ~ diagonalDifference ~ diagonalDifference(arr)",
-  diagonalDifference([
-    [11, 2, 4],
-    [4, 5, 6],
-    [10, 8, -12],
-  ])
+  "🚀 ~ file: array.js ~ line 378 ~ sockMerchant ~ sockMerchant(n, ar) ",
+  sockMerchant(9, [10, 20, 20, 10, 10, 30, 50, 10, 20])
 );

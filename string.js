@@ -262,3 +262,22 @@
 // }
 // console.log("🚀 ~ PM", timeConversion('12:01:01PM'))//'12:01:01'
 // console.log("🚀 ~ AM", timeConversion('12:01:01AM'))//'00:01:01'
+
+// plangrams ------------------------------------------------------------
+
+// function pangrams(s) {
+//   let hash = {};
+//   s = s.toLowerCase();
+//   for(let i = 0; i < s.length; i++) {
+//     if(s[i] !== ' ') hash[s[i]] = s[i];
+//   }
+//   return Object.keys(hash).length === 26 ? 'pangram' : 'not pangram';
+// }
+// console.log(
+//   "🚀 ~ file: string.js ~ line 269 ~ pangrams ~ pangrams(s)",
+//   pangrams("We promptly judged antique ivory buckles for the next prize")
+// ); //pangram
+// console.log(
+//   "🚀 ~ file: string.js ~ line 269 ~ pangrams ~ pangrams(s)",
+//   pangrams("We promptly judged antique ivory buckles for the prize")
+// ); // not pangram
