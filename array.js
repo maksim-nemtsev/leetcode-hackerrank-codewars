@@ -373,25 +373,79 @@
 
 // maerchant socks ----------------------------------------------------------------
 
-function sockMerchant(n, ar) {
-  // Write your code here
-  let hash = {};
-  let count = 1;
-  let result = 0;
+// function sockMerchant(n, ar) {
+//   // Write your code here
+//   let hash = {};
+//   let count = 1;
+//   let result = 0;
 
-  for (let i = 0; i < ar.length; i++) {
-    const el = ar[i];
-    if (!hash[el]) {
-      hash[el] = count;
-    } else hash[el]++;
-  }
-  const keys = Object.values(hash);
-  keys.forEach((el) => {
-    result += Math.floor(el / 2);
-  });
-  return result;
-}
-console.log(
-  "🚀 ~ file: array.js ~ line 378 ~ sockMerchant ~ sockMerchant(n, ar) ",
-  sockMerchant(9, [10, 20, 20, 10, 10, 30, 50, 10, 20])
-);
+//   for (const el of ar) {
+//     if (!hash[el]) {
+//       hash[el] = count;
+//     } else hash[el]++;
+//   }
+//   const keys = Object.values(hash);
+//   keys.forEach((el) => {
+//     result += Math.floor(el / 2);
+//   });
+//   return result;
+// }
+// console.log(
+//   "🚀 ~ file: array.js ~ line 378 ~ sockMerchant ~ sockMerchant(n, ar) ",
+//   sockMerchant(9, [10, 20, 20, 10, 10, 30, 50, 10, 20])
+// );
+
+// const arr = ["hello", "world", "max", "min", "length", "width", "padding"];
+
+// const combineStringsToArray = (arr) => {
+//   const sortArr = arr.sort();
+//   let result = [];
+
+//   return result;
+// };
+// console.log(
+//   "🚀 ~ file: array.js ~ line 406 ~ combineStringsToArray ~ combineStringsToArray",
+//   combineStringsToArray(sortArr)
+// );
+
+
+//flat array ----------------------------------------------------------------
+// const arr = [1, [2, [3, [4, 5]]]];
+
+// const flatArr = (arr) => {
+//   let result = [];
+
+//   for (let i = 0; i < arr.length; i++) {
+//     const el = arr[i];
+
+//     if(Array.isArray(el)) {
+//         result = result.concat(flatArr(el));
+//     } else {
+//         result.push(el);
+//     }
+//   }
+//   return result;
+// };
+// console.log("🚀 ~ file: array.js ~ line 416 ~ flatArr ~ flatArr", flatArr(arr));
+// const flatArr = (ary) => ary.reduce((a, b) => Array.isArray(b) ?  a.concat(flatArr(b)) : a.concat(b), []);
+
+// const flatArr = (arr) => {
+//     //разворачиваем массив из аргументов в новый массив для работы
+//     const forDeletedArrs = [...arr];
+//     const result = [];
+//     while(forDeletedArrs.length) {
+//         //откусываем у рабочего массива по крайнему элементу
+//         //если это массив то пушим развернуй во временную переменную
+//         //если не маассив , то просто пушим елемент во временную переменную
+//         //до тех пор , пока из скопированного массива для работы не останется элементов
+//         let curr = forDeletedArrs.shift();
+//         if(Array.isArray(curr)) {
+//             forDeletedArrs.push(...curr);
+//         }
+//         else result.push(curr);
+//     }
+//     return result;
+// }
+
+// const arr = [1, [2, [3, [4, 5]]]];
+// console.log("🚀 ~ file: array.js ~ line 450 ~ flatArr ~ flatArr", flatArr(arr))

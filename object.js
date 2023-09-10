@@ -106,7 +106,6 @@
 //   DNAStrand("ATTGC")
 // );
 
-
 //------------------------------------------------------------------------------------------------
 // const obj = { a: 1, b: 2, c: 3 };
 
@@ -119,3 +118,29 @@
 //   // obj[keys[i]] - а это свойство, доступное по этому ключу
 // }
 //-------------------------------------------------------------------------------------------
+
+//find children in object ----------------------------------------------------------------
+// const obj = {
+//   a: {
+//     b: {
+//       c: {
+//         d: "d",
+//       },
+//       c2: "c2",
+//     },
+//     b2: "b2",
+//   },
+//   f: "f",
+// };
+// const path = 'a.b.c.d';
+// // find children in object a.b.c.d
+// const findNestedKeys = (obj, path) => {
+//   let result = obj;
+//   const arrOfPath = path.split('.');
+
+//   for(const el of arrOfPath) {
+//     result = result[el]
+//   }
+//   return result;
+// }
+// console.log('findNestedKeys: ', findNestedKeys(obj, path));
