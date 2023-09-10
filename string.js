@@ -281,3 +281,41 @@
 //   "🚀 ~ file: string.js ~ line 269 ~ pangrams ~ pangrams(s)",
 //   pangrams("We promptly judged antique ivory buckles for the prize")
 // ); // not pangram
+//-------------------------------------------------------------------------------
+// write a function that takes an array of strings.
+// Returns a new string containing all vowels.
+// const arrOfStr = ["aerotufilo", "max", "mix", "mx", "aeoui"];
+
+// const takeStrWithAllVowels = (arr) => {
+//   let result = [];
+//   let arrWithCountAllVowels = [];
+//   arr.forEach((str) => {
+//     let objOfVowels = {
+//       a: 1,
+//       e: 1,
+//       i: 1,
+//       o: 1,
+//       u: 1,
+//     };
+//     let tmp = str.split("");
+//     tmp.forEach((char) => {
+//       if (objOfVowels[char]) {
+//         objOfVowels[char]++;
+//       }
+//     });
+//     let tmpArr = Object.values(objOfVowels);
+//     arrWithCountAllVowels.push(tmpArr);
+//   });
+//   arrWithCountAllVowels.forEach((arrOfCount, idx) => {
+//     if (arrOfCount.indexOf(1) === -1) {
+//       console.log("contains vowel");
+//       result.push(arr[idx]);
+//     }
+//   });
+//   return result;
+// };
+// console.log(
+//   "🚀 ~ file: string.js:301 ~ takeStrWithAllVowels ~ takeStrWithAllVowels:",
+//   takeStrWithAllVowels(arrOfStr)
+// );
+//--------------------------------------------------------------------------------------------------

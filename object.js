@@ -144,3 +144,15 @@
 //   return result;
 // }
 // console.log('findNestedKeys: ', findNestedKeys(obj, path));
+//-------------------------------------------------------------------------------------------////////////////////////////////
+// 	Write a program that takes two arrays of objects
+// and returns a new array containing the objects that appear in both arrays
+// const array1 = [{ name: "apple" }, { name: "banana" }, { name: "cherry" }];
+// const array2 = [{ name: "apple" }, { name: "mango" }, { name: "blueberry" }];
+
+// const sortedArrays = (array1, array2) =>
+//   array1.filter((obj, idx) => obj.name === array2[idx].name);
+// console.log(
+//   "🚀 ~ file: object.js:154 ~ sortedArrays:",
+//   sortedArrays(array1, array2)
+// );

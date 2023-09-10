@@ -408,7 +408,6 @@
 //   combineStringsToArray(sortArr)
 // );
 
-
 //flat array ----------------------------------------------------------------
 // const arr = [1, [2, [3, [4, 5]]]];
 
@@ -449,3 +448,81 @@
 
 // const arr = [1, [2, [3, [4, 5]]]];
 // console.log("🚀 ~ file: array.js ~ line 450 ~ flatArr ~ flatArr", flatArr(arr))
+
+//------------------------------------------------------------------------------
+// 	Write a program that takes two arrays of numbers as input
+// and returns a new array containing only the numbers that appear in both arrays
+
+// const arr1 = [2, 3, 4, 5, 6];
+// const arr2 = [7, 8, 9, 10, 5];
+
+// const takesArrayOfMathesNembers = (arr1, arr2) =>
+//   arr1.filter((num) => arr2.includes(num));
+// console.log(
+//   "🚀 ~ file: array.js:460 ~ takesArrayOfMathesNembers:",
+//   takesArrayOfMathesNembers(arr1, arr2)
+// );
+
+//------------------------------------------------------------------------------
+
+//	Write a program that takes an array of numbers and returns the second-highest number in the array.
+// const arr = [2, 10, 3, 4, 5, 6, 7, 8, 9];
+
+// const takeSecondNumber = (arr) => {
+//   let maxNum = 0;
+//   let result = 0;
+//   arr.forEach((num) => {
+//     if (num > maxNum) maxNum = num;
+//     if (num > result && num < maxNum) result = num;
+//   });
+//   return result;
+// };
+// console.log(
+//   "🚀 ~ file: array.js:472 ~ takeSecondNumber ~ takeSecondNumber:",
+//   takeSecondNumber(arr)
+// );
+
+//------------------------------------------------------------------------------
+// Write a program that takes a string as input and returns the most common character in the string.
+// const arrOfString1 = "aabacaaabbcc";
+// const arrOfString2 = "aabbacabaabbcbcb";
+// const arrOfString3 = "acabcaccacaacbbccc";
+// const arrOfString4 = "adadbacadaadbbdcdddcd";
+// const coommonCharacterOnString = (str) => {
+//   let dictionary = {};
+//   let count = 1;
+//   let result = "";
+//   for (const el of str) {
+//     if (!dictionary[el]) {
+//       dictionary[el] = count;
+//     } else {
+//       dictionary[el]++;
+//     }
+//   }
+//   let mostCommonChar = Object.entries(dictionary);
+//   let tmpCount = 0;
+//   mostCommonChar.forEach((arr) => {
+//     if (arr[1] > tmpCount) {
+//       tmpCount = arr[1];
+//       result = arr[0];
+//     }
+//   });
+//   return result;
+// };
+// console.log(
+//   "🚀 ~ file: array.js:514 ~ coommonCharacterOnString ~ coommonCharacterOnString:",
+//   coommonCharacterOnString(arrOfString1)
+// );
+// console.log(
+//   "🚀 ~ file: array.js:514 ~ coommonCharacterOnString ~ coommonCharacterOnString:",
+//   coommonCharacterOnString(arrOfString2)
+// );
+// console.log(
+//   "🚀 ~ file: array.js:514 ~ coommonCharacterOnString ~ coommonCharacterOnString:",
+//   coommonCharacterOnString(arrOfString3)
+// );
+// console.log(
+//   "🚀 ~ file: array.js:514 ~ coommonCharacterOnString ~ coommonCharacterOnString:",
+//   coommonCharacterOnString(arrOfString4)
+// );
+//------------------------------------------------------------------------------
