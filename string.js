@@ -318,4 +318,13 @@
 //   "🚀 ~ file: string.js:301 ~ takeStrWithAllVowels ~ takeStrWithAllVowels:",
 //   takeStrWithAllVowels(arrOfStr)
 // );
+
+//--------------------------------------------------------------------------------------------------
+//	Write a program that takes a string as input and returns true if the string is a palindrome
+// (i.e. reads the same forwards and backwards), false otherwise
+
+// const str = "abbad";
+// const isPalindrome = (str) => str === str.split("").reverse().join("");
+// console.log("🚀 ~ file: string.js:328 ~ isPalindrome:", isPalindrome(str));
+
 //--------------------------------------------------------------------------------------------------

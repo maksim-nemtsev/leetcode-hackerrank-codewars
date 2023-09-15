@@ -525,4 +525,34 @@
 //   "🚀 ~ file: array.js:514 ~ coommonCharacterOnString ~ coommonCharacterOnString:",
 //   coommonCharacterOnString(arrOfString4)
 // );
-//------------------------------------------------------------------------------
+//sorting array of numbers without sort() method -----------------------------------------------------------
+// const arrayOfNumbers = [5, 1, 2, 1, 4, 4, 3, 6, 5];
+// const getSortingArrayOfNumbers = (arrayOfNumbers) => {
+//   if (Array.isArray(arrayOfNumbers)) {
+//     const result = [];
+
+//     for (let i = 0; i < arrayOfNumbers.length; i++) {
+//       for (let j = 0; j < arrayOfNumbers.length - i - 1; j++) {
+//         if (arrayOfNumbers[j] > arrayOfNumbers[j + 1]) {
+//           let temp = arrayOfNumbers[j];
+//           arrayOfNumbers[j] = arrayOfNumbers[j + 1];
+//           arrayOfNumbers[j + 1] = temp;
+//         }
+//       }
+//       result.push(arrayOfNumbers[i]);
+//     }
+//     return result;
+//   } else return null;
+// };
+// console.log(
+//   "🚀 ~ file: array.js:549 ~ getSortingArrayOfNumbers ~ getSortingArrayOfNumbers:",
+//   getSortingArrayOfNumbers(arrayOfNumbers)
+// );
+
+//------------------------------------------------------------------------------------------------
+
+// Напишите функцию, которая находит среднее арифметическое чисел в массиве.
+// Создайте функцию, которая фильтрует массив объектов по определенному критерию.
+// Напишите функцию, которая объединяет два массива, удаляя дубликаты.
+// Реализуйте функцию, которая сортирует массив чисел в порядке возрастания, используя алгоритм сортировки выбором.
+// Создайте функцию, которая выполняет слияние двух отсортированных массивов в один отсортированный массив за время O(n).
