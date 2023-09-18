@@ -37,6 +37,26 @@
 //   countOfDepth(obj)
 // );
 // Напишите рекурсивную функцию для генерации всех перестановок заданной строки.
+// function* generatePermutations(str) {
+//   if (str.length === 1) {
+//     yield str;
+//   } else {
+//     for (let i = 0; i < str.length; i++) {
+//       const currentChar = str[i];
+//       const restOfStr = str.slice(0, i) + str.slice(i + 1);
+
+//       for (const permutation of generatePermutations(restOfStr)) {
+//         yield currentChar + permutation;
+//       }
+//     }
+//   }
+// }
+
+// const input = "abc";
+
+// for (const perm of generatePermutations(input)) {
+//   console.log(perm);
+// }
 // Реализуйте функцию для обхода DOM-дерева и поиска всех элементов с заданным классом, используя рекурсию.
 // Создайте рекурсивную функцию для вычисления чисел Фибоначчи с мемоизацией (запоминанием уже вычисленных значений).
 
