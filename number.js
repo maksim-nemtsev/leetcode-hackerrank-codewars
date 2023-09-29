@@ -213,3 +213,82 @@
 //   "🚀 ~ file: number.js ~ line 208 ~ flippingBits ~ flippingBits(n)",
 //   flippingBits(3)
 // );
+//---------------------------------------------------------------->
+//----------------------test tasks-------------------------------->
+// Multiples of 3 and 5;
+// If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9.
+// The sum of these multiples is 23.
+// const multiplyByNumber = (num: number): number => {
+//   //1 solution----------------------------------------------------------------
+//   let result: number = 0;
+//   for (let i: number = 0; i < num; i++) {
+//     result += i % 3 === 0 || i % 5 === 0 ? i : 0;
+//   }
+//   return result;
+//2 solution----------------------------------------------------------------
+//   const fiveCoFactor = Math.floor((num - 1) / 5);
+//   const threeCoFactor = Math.floor((num - 1) / 3);
+//   const fifteenCoFactor = Math.floor((num - 1) / 15);
+//   const fiveSum = (5 * fiveCoFactor * (fiveCoFactor + 1)) / 2;
+//   const threeSum = (3 * threeCoFactor * (threeCoFactor + 1)) / 2;
+//   const fifteenSum = (15 * fifteenCoFactor * (fifteenCoFactor + 1)) / 2;
+//   return fiveSum + threeSum - fifteenSum;
+//3 solution---------------------------------------------------------------
+//   if (num <= 0) return 0;
+//   return [...Array(num)]
+//     .map((_, i) => i)
+//     .filter((_, index) => index % 3 === 0 || index % 5 === 0)
+//     .reduce((a, b) => a + b, 0);
+// };
+// console.log(
+//   "🚀 ~ file: numbers.ts:6 ~ multiplyByNumber ~ multiplyByNumber:",
+//   multiplyByNumber(20)
+// ); // should return 78 //
+
+//------------------------------------------------------------------------------
+// Черепашке нужно забраться на вершину холма.
+// Расстояние от подножия холма до его вершины - 100м.
+// Черепашка за день залезает вверх по холму на 50м. Ночью она спит и скатывается на 30м вниз.
+// На какие сутки черепашка залезет на столб
+
+// const ninjaTurtle = (
+//   totalDistance: number,
+//   climbDistance: number,
+//   rollbackDistance: number
+// ) => {
+//   let days = 0;
+//   while (totalDistance > 0) {
+//     days++;
+//     totalDistance -= climbDistance;
+//     if (totalDistance >= 0) {
+//       totalDistance += rollbackDistance;
+//     }
+//   }
+//   return days;
+// };
+// console.log(
+//   "🚀 ~ file: numbers.ts:50 ~ ninzaTurtle ~ ninzaTurtle:",
+//   ninjaTurtle(100, 50, 30)
+// );
+//------------------------------------------------------------------------------------------------
+/*
+В комнате находится человек. 
+Через какое-то время в комнату заходит еще один человек и здоровается с первым. 
+Людей в комнате становится 2, а счетчик рукопожатий становится равен 1. 
+Через какое-то время заходит еще один человек и здоровается с другими людьми в комнате. 
+Людей в комнате - 3 и счетчик рукопожатий - 3. И т.д. 
+Требуется написать код на JS для подсчета кол-ва рукопожатий для 10 человек и дать ответ. 
+Решить на javascript
+*/
+// const getHandshakesCount = (n: number): number => {
+//   let count = 0;
+//   for (let i = 1; i <= n; i++) {
+//     count += i;
+//   }
+//   return count - n;
+// };
+
+// console.log(getHandshakesCount(10)); // 45
+
+//<----------------------------------------------------------------|
+//<----------------------test tasks--------------------------------|

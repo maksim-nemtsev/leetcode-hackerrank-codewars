@@ -328,3 +328,10 @@
 // console.log("🚀 ~ file: string.js:328 ~ isPalindrome:", isPalindrome(str));
 
 //--------------------------------------------------------------------------------------------------
+//return longest substring containing vowesl
+// 'abcdeougiaou' return 4, because 'iaou' = 4 in string 'abcdeougiaou' and this is longer substring in string
+// export function solve(s) {
+//   const mathValues = Math.max(...s.match(/[aeoui]+/gi).map((el) => el.length));
+//   console.log("🚀 ~ file: string.js:333 ~ solve ~ mathValues:", mathValues);
+// }
+// console.log("🚀 ~ file: string.js:332 ~ solve ~ solve:", solve("abbaeod"));

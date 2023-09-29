@@ -23,7 +23,7 @@
 // };
 // console.log(
 //   "🚀 ~ file: index.js ~ line 155 ~ merge ~ merge",
-//   merge([1, 2, 3, 0, 0, 0], 3, [2, 5, 6, 7, 8, 9], 3)
+//   merge([1, 2, 3, 0, 0, 0], 4, [2, 4, 5, 5, 7, 8, 9], 5)
 // );
 
 // let merge = function (nums1, m, nums2, n) {
@@ -52,14 +52,15 @@
 //   );
 
 // ---------------two sum-----------------------
-/**
- * @param {number[]} nums
- * @param {number} target
- * @return {number[]}
- */
+// /**
+//  * @param {number[]} nums
+//  * @param {number} target
+//  * @return {number[]}
+//  */
 // let twoSum = function (nums, target) {
 //   const numsIndexes = {};
 
+//   console.log("🚀 ~ file: array.js:62 ~ twoSum ~ numsIndexes:", numsIndexes);
 //   for (let i = 0; i < nums.length; i += 1) {
 //     let currentDifference = target - nums[i];
 
@@ -573,6 +574,41 @@
 // console.log(
 //   "🚀 ~ file: array.js:566 ~ findOdd ~ findOdd:",
 //   findOdd([20, 1, 1, 2, 2, 3, 3, 5, 5, 4, 20, 4, 5])
+// );
+//------------------------------------------------------------------------------
+//The goal of this exercise is
+//to convert a string to a new string
+//where each character in the new string is "("
+//if that character appears only once in the original string,
+//or ")" if that character appears more than once in the original string.
+//Ignore capitalization when determining if a character is a duplicate.
+const uniqueDuplicate = (str) => {
+  // 1.solution
+  //   return str
+  //     .toLowerCase()
+  //     .split("")
+  //     .map((el, _, self) =>
+  //       self.indexOf(el) === self.lastIndexOf(el) ? ")" : "("
+  //     )
+  //     .join("");
+  // 2.solution
+//   const dict = {};
+//   const strToLC = str.toLowerCase();
+//   for (const el of strToLC) {
+//     if (dict[el]) {
+//       dict[el] = ")";
+//     } else {
+//       dict[el] = "(";
+//     }
+//   }
+//   return strToLC
+//     .split("")
+//     .map((el) => dict[el.toLowerCase()])
+//     .join("");
+// };
+// console.log(
+//   "🚀 ~ file: array.js:593 ~ uniqueDuplicate ~ uniqueDuplicate:",
+//   uniqueDuplicate("abber")
 // );
 // Напишите функцию, которая находит среднее арифметическое чисел в массиве.
 // Создайте функцию, которая фильтрует массив объектов по определенному критерию.
