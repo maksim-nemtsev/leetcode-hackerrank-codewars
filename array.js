@@ -582,16 +582,16 @@
 //if that character appears only once in the original string,
 //or ")" if that character appears more than once in the original string.
 //Ignore capitalization when determining if a character is a duplicate.
-const uniqueDuplicate = (str) => {
-  // 1.solution
-  //   return str
-  //     .toLowerCase()
-  //     .split("")
-  //     .map((el, _, self) =>
-  //       self.indexOf(el) === self.lastIndexOf(el) ? ")" : "("
-  //     )
-  //     .join("");
-  // 2.solution
+// const uniqueDuplicate = (str) => {
+// 1.solution
+//   return str
+//     .toLowerCase()
+//     .split("")
+//     .map((el, _, self) =>
+//       self.indexOf(el) === self.lastIndexOf(el) ? ")" : "("
+//     )
+//     .join("");
+// 2.solution
 //   const dict = {};
 //   const strToLC = str.toLowerCase();
 //   for (const el of strToLC) {
@@ -610,8 +610,53 @@ const uniqueDuplicate = (str) => {
 //   "🚀 ~ file: array.js:593 ~ uniqueDuplicate ~ uniqueDuplicate:",
 //   uniqueDuplicate("abber")
 // );
+
+//------------------------------------------------------------------------------
+// [1, 2, 3, 6, 4, 10, 7, 4, 5, 11] -> [10,11] finde two max numbers in array
+// const arrOfNums = [1, 2, 3, 6, 4, 10, 7, 20, 0, 4, 5, 11];
+// const getTwoMaxNum = (arr) => {
+//   let maxNum = 0;
+//   let secondMaxNum = 0;
+//   for (const el of arr) {
+//     if (el > maxNum) {
+//       //!!!
+//       secondMaxNum = maxNum;
+//       maxNum = el;
+//     }
+
+//     if (el > secondMaxNum && el < maxNum) {
+//       secondMaxNum = el;
+//     }
+//   }
+
+//   return [secondMaxNum, maxNum];
+// };
+// console.log(
+//   "🚀 ~ file: array.js:618 ~ getTwoMaxNum ~ getTwoMaxNum:",
+//   getTwoMaxNum(arrOfNums)
+// );
+
+//analogue map function
+
+// Array.prototype.customMap(elOfArr) {
+//   const result = [];
+//   const thisArray = this;
+
+//   for(let i = 0; i < elOfArr.length; i++) {
+//     result.push(elOfArr, el, i, this)
+//   }
+//   return result;
+// }
+
 // Напишите функцию, которая находит среднее арифметическое чисел в массиве.
 // Создайте функцию, которая фильтрует массив объектов по определенному критерию.
 // Напишите функцию, которая объединяет два массива, удаляя дубликаты.
 // Реализуйте функцию, которая сортирует массив чисел в порядке возрастания, используя алгоритм сортировки выбором.
 // Создайте функцию, которая выполняет слияние двух отсортированных массивов в один отсортированный массив за время O(n).
+
+say("Hello");
+let phrase = "World";
+
+function say(el) {
+  console.log(el + ", " + phrase);
+}

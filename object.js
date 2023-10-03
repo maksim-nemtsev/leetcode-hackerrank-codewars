@@ -112,7 +112,7 @@
 // const keys = Object.keys(obj);
 // console.log("🚀 ~ file: array.js ~ line 312 ~ keys", keys);
 
-// for (let i = 0, l = keys.length; i < l; i++) {
+// for (let i = 0; i < keys.length; i++) {
 //   console.log(keys[i] + " is " + obj[keys[i]]);
 //   // keys[i] - это ключ
 //   // obj[keys[i]] - а это свойство, доступное по этому ключу
@@ -132,41 +132,34 @@
 //   },
 //   f: "f",
 // };
-// const path = 'a.b.c.d';
+// const path = "a.b.c.d";
 // // find children in object a.b.c.d
 // const findNestedKeys = (obj, path) => {
 //   let result = obj;
-//   const arrOfPath = path.split('.');
+//   const arrOfPath = path.split(".");
 
-//   for(const el of arrOfPath) {
-//     result = result[el]
+//   for (const el of arrOfPath) {
+//     if (!result[el]) {
+//       return "incorrect path";
+//     }
+//     result = result[el];
 //   }
 //   return result;
-// }
-// console.log('findNestedKeys: ', findNestedKeys(obj, path));
+// };
+// console.log("findNestedKeys: ", findNestedKeys(obj, path));
 //-------------------------------------------------------------------------------------------////////////////////////////////
 // 	Write a program that takes two arrays of objects
 // and returns a new array containing the objects that appear in both arrays
 // const array1 = [{ name: "apple" }, { name: "banana" }, { name: "cherry" }];
-// const array2 = [{ name: "apple" }, { name: "mango" }, { name: "blueberry" }];
+// const array2 = [{ name: "mango" }, { name: "apple" }, { name: "blueberry" }];
 
-// const sortedArrays = (array1, array2) =>
-//   array1.filter((obj, idx) => obj.name === array2[idx].name);
+// const sortedArrays = (array1, array2) => {
+
+// };
 // console.log(
 //   "🚀 ~ file: object.js:154 ~ sortedArrays:",
 //   sortedArrays(array1, array2)
 // );
-
-//-------------------------------------------------------------------------------------------//
-// Создайте функцию, которая объединяет два объекта в один.
-// const obj1 = { firstName: "max" };
-// const obj2 = { lastName: "mix" };
-
-// const spreadObjects = (obj1, obj2) => ({ ...obj1, ...obj2 });
-// console.log(
-//   "🚀 ~ file: object.js:166 ~ spreadObjects:",
-//   spreadObjects(obj1, obj2)
-//   );
 //-------------------------------------------------------------------------------------------//
 // Напишите функцию, которая удаляет свойство из объекта по его имени.
 // const obj1 = { firstName: "max", lastName: "mix" };
@@ -193,4 +186,27 @@
 // console.log(
 //   "🚀 ~ file: object.js:195 ~ deepClone ~ deepClone:",
 //   deepClone(obj)
+// );
+//--------------------------------------------------------------------------------------------------------------------
+// функцию, которая сравнит 2 разных объекта с одинаковыми полями (или нразными) и вернет true или false
+// например isEqual({a: "a", b: "b"}, {b: "b", a: "a"}) должно вернуть true
+// isEqual({c: "c", b: "b"}, {b: "b", a: "a"}) должно вернуть false
+// function isEqual(obj1, obj2) {
+//   if (Object.keys(obj1).length !== Object.keys(obj2).length) {
+//     return false;
+//   }
+//   for (const key in obj1) {
+//     if (obj1[key] !== obj2[key]) {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
+// console.log(
+//   "🚀 ~ file: object.js:198 ~ isEqual ~ isEqual:",
+//   isEqual({ a: "a", b: "b" }, { b: "b", a: "a" })
+// );
+// console.log(
+//   "🚀 ~ file: object.js:198 ~ isEqual ~ isEqual:",
+//   isEqual({ c: "c", b: "b" }, { b: "b", a: "a" })
 // );
